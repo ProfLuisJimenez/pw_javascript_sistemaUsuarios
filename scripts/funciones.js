@@ -1,5 +1,5 @@
 function cargar() {
-    const usuarios = [{ nombre: "Luis", rol: "Admin", color: "#ff0000" }];
+    const usuarios = [{"nombre": "Luis", "rol": "1", "color": "#ff0000"}];
     document.getElementById("boton").addEventListener("click", function () {
         agregar(usuarios);
     });
@@ -8,7 +8,7 @@ function cargar() {
 
 function agregar(usuarios){
     let nombre = document.getElementById("nombre").value;
-    let rol = document.querySelector('input[name="rol"]:checked').value;
+    let rol = document.querySelector('input[name="rol"]:checked')?.value;
     let color = document.getElementById("color").value;
     if (validar(nombre, rol, color)) {
         usuarios.push({ nombre: nombre, rol: rol, color: color });
