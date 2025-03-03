@@ -1,0 +1,11 @@
+body { 
+    font-family: Arial, sans-serif; 
+    max-width: 600px; 
+    margin: auto; 
+}
+        
+.tarjeta { 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    margin-bottom: 10px; 
+}

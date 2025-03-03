@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link href="styles/estilo1.css" rel="stylesheet">
+    <script src="scripts/funciones.js"></script>
+</head>
+<body onload="cargar()">
+    <h1>Gestión de Usuarios</h1>
+    <h2>Agregar Usuario</h2>
+    <form id="formulario">
+        <input name="nombre" id="nombre" placeholder="Nombre" required>
+        <fieldset>
+            <legend>Rol</legend>
+            <label><input type="radio" name="rol" value="Admin" required> Admin</label>
+            <label><input type="radio" name="rol" value="Usuario" required> Usuario</label>
+        </fieldset>
+        <input type="color" name="color" id="color" required>
+        <button type="button" id="boton">Agregar Usuario</button>
+    </form>
+    <h2>Lista de usuarios:</h2>
+    <div id="usuarios">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Rol</th>
+                    <th>Color</th>
+                </tr>
+            </thead>
+            <tbody id="tabla">
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
