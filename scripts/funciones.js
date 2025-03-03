@@ -1,5 +1,3 @@
-let usuarios = [];
-
 function cargar() {
     const usuarios = [{ nombre: "Luis", rol: "Admin", color: "#ff0000" }];
     document.getElementById("boton").addEventListener("click", function () {
@@ -32,10 +30,25 @@ function validar(n,r,c){
 function imprimir(usuarios){
     let tabla = document.getElementById("tabla");
     tabla.innerHTML = "";
+    let rol = "";
     usuarios.forEach(usuario => {
+        switch (usuario.rol) {
+            case "1":
+                rol = "Admin";
+                break;
+            case "2":
+                rol = "User";
+                break;
+            case "3":
+                rol = "NonUser";
+                break;
+            default:
+                rol = "User";
+                break;
+        }
         tabla.innerHTML += `<tr style="color: ${usuario.color}">
         <td>${usuario.nombre}</td>
-        <td>${usuario.rol}</td>
+        <td>${rol}</td>
         <td>${usuario.color}</td>
         </tr>`;
     });
